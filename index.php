@@ -9,8 +9,10 @@ use Utils\Polish;
 
 if (PHP_SAPI === 'cli') {
     $SortStation = new SortStation(fgets(STDIN));
-    $SortStation->parseLexems();
-    echo Polish::Parse($SortStation->getLexems()) . "\n";
+    $lexems = $SortStation
+        ->parseLexems()
+        ->getLexems();
+    echo Polish::Parse($lexems) . "\n";
     echo eval("return " . $SortStation->getFormula() . ";");
 } else {
     die("Is cli-based application.");
