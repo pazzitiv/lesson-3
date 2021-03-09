@@ -4,7 +4,7 @@
 namespace Utils;
 
 
-class Polish
+class Polish implements Parser
 {
     public static function Parse(array $lexems): string
     {
