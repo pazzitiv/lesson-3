@@ -46,4 +46,9 @@ class SortStation
     {
         return $this->lexems;
     }
+
+    public function getFormula(): string
+    {
+        return $this->rawFormula;
+    }
 }
